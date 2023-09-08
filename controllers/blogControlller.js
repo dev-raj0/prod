@@ -19,7 +19,6 @@ exports.getAllBlogsController = async (req, res) => {
       blogs,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).send({
       success: false,
       message: "Error WHile Getting Blogs",
@@ -62,7 +61,6 @@ exports.createBlogController = async (req, res) => {
       newBlog,
     });
   } catch (error) {
-    console.log(error);
     return res.status(400).send({
       success: false,
       message: "Error WHile Creting blog",
@@ -87,7 +85,6 @@ exports.updateBlogController = async (req, res) => {
       blog,
     });
   } catch (error) {
-    console.log(error);
     return res.status(400).send({
       success: false,
       message: "Error WHile Updating Blog",
@@ -113,7 +110,6 @@ exports.getBlogByIdController = async (req, res) => {
       blog,
     });
   } catch (error) {
-    console.log(error);
     return res.status(400).send({
       success: false,
       message: "error while getting single blog",
@@ -136,7 +132,6 @@ exports.deleteBlogController = async (req, res) => {
       message: "Blog Deleted!",
     });
   } catch (error) {
-    console.log(error);
     return res.status(400).send({
       success: false,
       message: "Erorr WHile Deleteing BLog",
@@ -162,7 +157,6 @@ exports.userBlogControlller = async (req, res) => {
       userBlog,
     });
   } catch (error) {
-    console.log(error);
     return res.status(400).send({
       success: false,
       message: "error in user blog",

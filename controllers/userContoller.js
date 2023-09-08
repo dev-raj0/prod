@@ -1,6 +1,7 @@
 const userModel = require("../models/userModel");
 const bcrypt = require("bcrypt");
 
+
 //create user register user
 exports.registerController = async (req, res) => {
   try {
@@ -31,7 +32,6 @@ exports.registerController = async (req, res) => {
       user,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).send({
       message: "Error In Register callback",
       success: false,
@@ -39,6 +39,7 @@ exports.registerController = async (req, res) => {
     });
   }
 };
+
 
 // get all users
 exports.getAllUsers = async (req, res) => {
@@ -51,7 +52,6 @@ exports.getAllUsers = async (req, res) => {
       users,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).send({
       success: false,
       message: "Error In Get ALl Users",
@@ -59,6 +59,7 @@ exports.getAllUsers = async (req, res) => {
     });
   }
 };
+
 
 //login
 exports.loginController = async (req, res) => {
@@ -92,7 +93,6 @@ exports.loginController = async (req, res) => {
       user,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).send({
       success: false,
       message: "Error In Login Callcback",
